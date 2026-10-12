@@ -1,11 +1,19 @@
 @BookApi_HostAddress = http://localhost:5207
 
-GET {{BookApi_HostAddress}}/todos/
+GET {{BookApi_HostAddress}}/books
 Accept: application/json
 
 ###
 
-GET {{BookApi_HostAddress}}/todos/1
+GET {{BookApi_HostAddress}}/books/1
 Accept: application/json
 
-###
+### Create a new book   
+POST {{BookApi_HostAddress}}/books  
+Content-Type: application/json  
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "Year": 1925
+}
